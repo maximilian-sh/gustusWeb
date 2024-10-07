@@ -1,0 +1,478 @@
+:root {
+    --primary-color: #ffffff; /* White background */
+    --secondary-color: #f0f4f8; /* Light gray for sections */
+    --text-color: #333333; /* Dark gray for text */
+    --bg-color: #ffffff; /* White background */
+    --accent-color: #004225; /* Deep forest green (0, 66, 37) */
+    --accent-light: #005f35; /* Slightly lighter version for hover effects */
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container-download {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--primary-color); /* Light background for navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0; /* Increased padding */
+}
+
+.logo {
+    font-size: 28px; /* Increased font size */
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 40px; /* Increased margin */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color); /* Dark text color for nav links */
+    font-weight: 600;
+    font-size: 18px; /* Increased font size */
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--accent-color); /* Accent color on hover */
+}
+
+.nav-links .cta-button {
+    background-color: var(--accent-color);
+    color: var(--white); /* Ensuring white text color for the button */
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-links .cta-button:hover {
+    background-color: var(--accent-light);
+    color: var(--white); /* Keeping text color white on hover */
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px;
+    transition: var(--transition);
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-content .cta-button {
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+    font-weight: 600;
+}
+
+.hero-content .cta-button:hover {
+    background-color: var(--accent-light);
+}
+
+.gustus-screenshot {
+    flex: 1;
+}
+
+.gustus-screenshot img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content,
+    .gustus-screenshot {
+        width: 100%;
+    }
+
+    .gustus-screenshot {
+        margin-top: 2rem;
+    }
+
+    .hero-content h1,
+    .hero-content p {
+        text-align: center;
+    }
+}
+
+/* Features Section */
+#features {
+    padding: 100px 0;
+    background-color: var(--white); /* Ensure this is white, not grey */
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item i {
+    font-size: 48px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Recipes Section */
+#recipes {
+    padding: 100px 0;
+    background-color: var(--white); /* Ensure this is white, not grey */
+}
+
+#recipes h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.recipe-slider {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.recipe-card {
+    background-color: var(--white); /* Change this to white instead of secondary-color */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background-color: var(--white); /* Changed to white */
+    padding: 10px;
+}
+
+.recipe-card h3 {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: var(--accent-color);
+    margin-top: auto;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 100px 0;
+    background-color: var(--white); /* Ensure this is white, not grey */
+}
+
+#testimonials h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.testimonial-slider {
+    /* Styles for the testimonial slider will be added here */
+}
+
+/* Download Section */
+#download {
+    padding: 100px 0;
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-align: center;
+}
+
+#download h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#download p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.app-store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.app-store-button img {
+    height: 50px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--accent-color); /* Darker background for footer */
+    color: var(--white); /* White text for better contrast */
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+}
+
+.footer-links li {
+    margin-left: 30px;
+}
+
+.footer-links a {
+    color: var(--white); /* White text color for footer links */
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color); /* Light color on hover for better visibility */
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: var(--white); /* White color for social icons */
+    font-size: 24px;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color); /* Light color on hover for better visibility */
+}
+
+@media (max-width: 640px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links,
+    .social-icons {
+        margin-top: 1rem;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 20px 0; /* Adjust padding for mobile */
+    }
+
+    .logo {
+        font-size: 24px; /* Adjust font size for mobile */
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        margin: 20px 0; /* Adjust margin for mobile */
+    }
+
+    .nav-links a {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+
+    .hero-content {
+        padding-right: 0;
+    }
+
+    #features {
+        padding: 60px 20px; /* Reduced top/bottom padding, added left/right padding */
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        max-width: 90%; /* Prevent full width */
+        margin: 0 auto; /* Center the grid */
+    }
+
+    .feature-item {
+        padding: 20px; /* Reduced padding for mobile */
+    }
+
+    /* ... rest of the existing media query styles ... */
+}
+
+.tos-content {
+    padding-top: 13vh;
+    padding-bottom: 3vh;
+}
+
+.privacy-content {
+    padding-top: 13vh;
+    padding-bottom: 3vh;
+}
+
+.imprint-content {
+    padding-top: 13vh;
+    padding-bottom: 3vh;
+}
+
+/* Navigation Container */
+nav.container {
+    display: flex;
+    justify-content: space-between; /* Aligns logo to the right */
+    align-items: center; /* Vertically centers items */
+    padding: 1rem 2rem; /* Adjust padding as needed */
+    background-color: #fff; /* Background color for nav */
+}
+
+/* Logo Styling */
+.logo {
+    text-decoration: none; /* Removes underline */
+    font-size: 1.5rem; /* Adjust font size */
+    font-weight: bold; /* Bold text */
+    color: #000; /* Logo text color */
+}
+
+.logo:hover {
+    color: #555; /* Example hover color */
+}
