@@ -13,16 +13,10 @@
             <nav class="container">
                 <a href="index.html" class="logo" aria-label="Gustus Home">Gustus</a>
                 <ul class="nav-links">
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#recipes">Recipes</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#download" class="cta-button">Download</a></li>
+                    <li class="desktop-only"><a href="#features">Features</a></li>
+                    <li class="desktop-only"><a href="#recipes">Recipes</a></li>
+                    <li class="mobile-show"><a href="#download" class="cta-button">Download</a></li>
                 </ul>
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
             </nav>
         </header>
 
@@ -86,16 +80,14 @@
                 </div>
             </section>
 
-            <section id="testimonials" class="py-20 bg-gray-100">
-                <div class="container mx-auto px-4">
-                    <h2 class="text-3xl font-semibold text-center mb-12">Testimonials Coming Soon</h2>
-                    <p class="text-lg text-center">Stay tuned for user feedback and experiences!</p>
-                </div>
-            </section>
-
             <section id="download" class="container-download">
-                <h2>TestFlight link coming soon!</h2>
-                <p>Stay tuned for the download and start mixing like a pro!</p>
+                <h2>Try Gustus Beta on TestFlight</h2>
+                <p>Start mixing like a pro today!</p>
+                <div class="app-store-buttons">
+                    <a href="https://testflight.apple.com/join/Cw52HVR9" class="app-store-button">
+                        <img src="/assets/testflight.png" alt="Download on TestFlight" />
+                    </a>
+                </div>
             </section>
         </main>
 
